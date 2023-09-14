@@ -1,0 +1,123 @@
+:root {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 1fr 7fr / 1fr 5fr;
+}
+
+.sidebar {
+    grid-area: 1 / 1 / -1 / 2; 
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    background-color:steelblue;
+    color: white;
+    padding-left: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header {
+    grid-area: 1 / 2 / 2 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px 40px;
+    gap: 10x;
+    font-weight: bold;
+}
+
+.topheader {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+.searchbar {
+    width: 60%;
+    background-color:  #D3D3D3;
+    border-radius: 20px;
+}
+
+.bottomheader {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 80%;
+}
+
+.buttons > button {
+    color: white;
+    background-color: steelblue;
+    width: 100px;
+    border-radius: 20px;
+    border-color: transparent;
+}
+
+.main {
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+    background-color: #D3D3D3;
+}
+
+h1 {
+    font-size: 0.8rem;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.projects {
+    grid-area: 1 / 1 / -1 / 2;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.card {
+    background-color: white;
+}
+
+.projects > .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+.container.one {
+    grid-area: 1 / 1 / -1 / 2;
+}
+.container.two {
+    grid-area: 1 / 2 / 2 / -1;
+}
+
+.container.three {
+    grid-area: 2 / 2 / -1 / -1;
+}
+
+.announcements .card {
+    display: flex;
+    flex-direction: column;
+}
